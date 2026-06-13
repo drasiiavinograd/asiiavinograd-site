@@ -57,7 +57,7 @@ export default function Home() {
               <button onClick={() => switchLocale('ru')} className={`px-3 py-1 rounded-full text-sm transition-all ${locale === 'ru' ? 'bg-white text-[#0a0f1e] font-medium' : 'text-white/60 hover:text-white'}`}>RU</button>
             </div>
             <a href={locale === 'ru' ? '/ru/auth' : '/auth'} className="border border-white/20 hover:border-white/40 text-white/70 hover:text-white text-sm px-4 py-2 rounded-full transition-colors">
-              {isRu ? 'Войти' : 'Sign In'}
+              {locale === 'ru' ? 'Войти' : 'Sign In'}
             </a>
             <button onClick={() => setModalOpen(true)} className="bg-[#f47c5a] hover:bg-[#e06b49] text-white text-sm px-4 py-2 rounded-full transition-colors">{t('nav.cta')}</button>
           </div>
