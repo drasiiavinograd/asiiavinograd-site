@@ -1,0 +1,84 @@
+{
+  "nav": {
+    "about": "About",
+    "curriculum": "Curriculum",
+    "lectures": "Lectures",
+    "connect": "Connect",
+    "cta": "Get in Touch"
+  },
+  "hero": {
+    "badge": "Accepting New Students",
+    "title": "Dr. Asiia Vinograd",
+    "subtitle": "MD, PhD",
+    "desc": "Practicing cardiologist and USMLE educator helping international medical graduates achieve their dreams of practicing medicine in the United States.",
+    "btn1": "Watch Lectures",
+    "btn2": "Learn More",
+    "stat1value": "4",
+    "stat1label": "Publications",
+    "stat2value": "96+",
+    "stat2label": "Citations",
+    "stat3value": "h-4",
+    "stat3label": "H-index",
+    "stat4value": "2.5yr",
+    "stat4label": "NICU Experience"
+  },
+  "about": {
+    "tag": "About",
+    "title": "Credentials & Experience",
+    "p1": "I am a physician, cardiologist, and researcher currently based in Phuket, Thailand — preparing for USMLE Step 1 alongside my students.",
+    "p2": "My path includes medical school at Bashkir State Medical University, cardiology residency, and a PhD from Harbin Medical University in China. I also have 2.5 years of NICU nursing experience, which shaped my passion for neonatology and pediatrics.",
+    "items": [
+      { "label": "MD", "sub": "Bashkir State Medical University, 2017" },
+      { "label": "Cardiology Residency", "sub": "BSMU, 2017–2019" },
+      { "label": "PhD Internal Medicine", "sub": "Harbin Medical University, China, 2022" },
+      { "label": "NICU Nurse", "sub": "Republican Children's Hospital, Ufa, 2015–2017" },
+      { "label": "Medical Coordinator", "sub": "APEX Hospital Phuket, 2026–present" }
+    ]
+  },
+  "curriculum": {
+    "tag": "Curriculum",
+    "title": "USMLE Step 1 Topics",
+    "desc": "All high-yield topics for Step 1 success — with clinical vignettes and diagnostic algorithms",
+    "items": [
+      { "title": "Microbiology", "topics": "Gram+ & Gram− bacteria, Viruses, Fungi, Parasites, Antibiotics" },
+      { "title": "Pharmacology", "topics": "Antibiotics, Cardiovascular drugs, Autonomic, CNS drugs" },
+      { "title": "Cardiology", "topics": "Physiology, ECG, Heart failure, Arrhythmias" },
+      { "title": "Pathology", "topics": "Inflammation, Neoplasia, Cell injury, Hemodynamics" },
+      { "title": "Biochemistry", "topics": "Metabolism, Genetics, Molecular biology, Vitamins" },
+      { "title": "Immunology", "topics": "Innate & adaptive, Hypersensitivity, Immunodeficiencies" },
+      { "title": "Renal & Respiratory", "topics": "Physiology, Acid-base, Diuretics, Lung pathology" },
+      { "title": "Neurology & Psychiatry", "topics": "CNS anatomy, Dementia, Movement disorders, Psychopharmacology" }
+    ]
+  },
+  "lectures": {
+    "tag": "Lectures",
+    "title": "Featured Videos",
+    "desc": "Step 1 content built around the most testable concepts",
+    "items": [
+      { "tag": "Microbiology · Step 1", "title": "Gram-Positive Bacteria — Complete Guide", "desc": "Full lab algorithm, Staph vs Strep, spore-forming bacilli, and 4 clinical vignettes.", "url": "https://youtu.be/z2io9SgLmgU", "soon": false },
+      { "tag": "Microbiology · Step 1", "title": "Gram-Negative Bacteria — Complete Guide", "desc": "Enterobacteriaceae, oxidase-positive rods, obligate intracellular organisms.", "url": "https://youtu.be/MJodsTtRXKs", "soon": false },
+      { "tag": "Microbiology · Step 1", "title": "Staphylococcus Aureus — Deep Dive", "desc": "Toxins, virulence factors, MRSA, and classic Step 1 clinical scenarios.", "url": "https://www.youtube.com/watch?v=u1agd7-hlxw", "soon": false },
+      { "tag": "Coming Soon · Step 1", "title": "Pharmacology — Antibiotics", "desc": "Mechanism of action, resistance patterns, and clinical indications.", "url": "https://patreon.com/drasiiavinograd", "soon": true },
+      { "tag": "Coming Soon · Step 1", "title": "Pathology — Inflammation & Repair", "desc": "Acute vs chronic inflammation, wound healing, granuloma formation.", "url": "https://patreon.com/drasiiavinograd", "soon": true },
+      { "tag": "Coming Soon · Step 1", "title": "Cardiology — ECG & Arrhythmias", "desc": "Systematic ECG reading, arrhythmia mechanisms, and high-yield pharmacology.", "url": "https://patreon.com/drasiiavinograd", "soon": true }
+    ],
+    "watchBtn": "Watch on YouTube →",
+    "joinBtn": "Join early access →"
+  },
+  "connect": {
+    "tag": "Connect",
+    "title": "Study Together",
+    "desc": "Join IMGs from around the world preparing for USMLE across all platforms",
+    "platforms": [
+      { "name": "YouTube", "sub": "Free lectures", "url": "https://youtube.com/@USMLEforIMG" },
+      { "name": "Telegram", "sub": "Free channel", "url": "https://t.me/usmle_vinograd" },
+      { "name": "Patreon", "sub": "$30/month", "url": "https://patreon.com/drasiiavinograd" },
+      { "name": "Discord", "sub": "Study community", "url": "https://discord.gg/Yn4hrf5nH" },
+      { "name": "LinkedIn", "sub": "Professional", "url": "https://linkedin.com/in/asiia-vinograd" },
+      { "name": "Email", "sub": "Get in touch", "url": "mailto:usmleforimgs.drvinograd@gmail.com" }
+    ]
+  },
+  "footer": {
+    "copy": "© 2026 Dr. Asiia Vinograd · drasiiavinograd.com"
+  }
+}
