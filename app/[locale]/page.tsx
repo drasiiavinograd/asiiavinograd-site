@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import Image from 'next/image';
+import ContactModal from '../../components/ContactModal';
 import { useRouter, usePathname } from 'next/navigation';
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 40);
@@ -54,7 +56,7 @@ export default function Home() {
               <button onClick={() => switchLocale('en')} className={`px-3 py-1 rounded-full text-sm transition-all ${locale === 'en' ? 'bg-white text-[#0a0f1e] font-medium' : 'text-white/60 hover:text-white'}`}>EN</button>
               <button onClick={() => switchLocale('ru')} className={`px-3 py-1 rounded-full text-sm transition-all ${locale === 'ru' ? 'bg-white text-[#0a0f1e] font-medium' : 'text-white/60 hover:text-white'}`}>RU</button>
             </div>
-            <a href="mailto:usmleforimgs.drvinograd@gmail.com" className="bg-[#f47c5a] hover:bg-[#e06b49] text-white text-sm px-4 py-2 rounded-full transition-colors">{t('nav.cta')}</a>
+            <button onClick={() => setModalOpen(true)} className="bg-[#f47c5a] hover:bg-[#e06b49] text-white text-sm px-4 py-2 rounded-full transition-colors">{t('nav.cta')}</button>
           </div>
           <button className="md:hidden text-white" onClick={() => setMenuOpen(!menuOpen)}>
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -211,5 +213,6 @@ export default function Home() {
         </div>
       </footer>
     </main>
+      <ContactModal isOpen={modalOpen} onClose={() => setModalOpen(false)} locale={locale} />
   );
 }
