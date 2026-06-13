@@ -81,7 +81,7 @@ export default function ContactModal({ isOpen, onClose, locale }: Props) {
               {isRu ? 'Написать доктору' : 'Get in Touch'}
             </h2>
             <p className="text-white/50 text-sm mt-1">
-              {isRu ? 'Оставьте контакт — мы ответим в течение 24 часов' : 'Leave your contact — we\'ll reply within 24 hours'}
+              {isRu ? 'Оставьте контакт — ответим в течение 5 минут' : 'Leave your contact — we\'ll reply within 5 minutes'}
             </p>
           </div>
           <button onClick={onClose} className="p-2 hover:bg-white/10 rounded-full transition-colors text-white text-xl">✕</button>
@@ -94,7 +94,7 @@ export default function ContactModal({ isOpen, onClose, locale }: Props) {
               {isRu ? 'Сообщение отправлено!' : 'Message sent!'}
             </h3>
             <p className="text-white/50 text-sm">
-              {isRu ? 'Мы свяжемся с вами в течение 24 часов.' : 'We\'ll get back to you within 24 hours.'}
+              {isRu ? 'Мы свяжемся с вами в течение 5 минут.' : 'We\'ll get back to you within 5 minutes.'}
             </p>
             <button onClick={onClose} className="mt-6 bg-[#f47c5a] text-white px-8 py-3 rounded-full font-medium">
               {isRu ? 'Закрыть' : 'Close'}
