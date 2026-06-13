@@ -17,7 +17,16 @@ export default function Home() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const switchLocale = (newLocale: string) => { const path = window.location.pathname; if (newLocale === "en") { window.location.href = path.replace(/^/ru/, "") || "/"; return; } window.location.href = "/ru" + (path.startsWith("/ru") ? path.slice(3) : path); };
+  const switchLocale = (newLocale: string) => {
+    const path = window.location.pathname;
+    if (newLocale === 'en') {
+      window.location.href = path.startsWith('/ru') ? (path.slice(3) || '/') : path;
+      return;
+    }
+    if (!path.startsWith('/ru')) {
+      window.location.href = '/ru' + path;
+    }
+  };
 
   const navLinks = [
     { key: 'about', label: t('nav.about') },
