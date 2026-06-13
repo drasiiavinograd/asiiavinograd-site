@@ -212,7 +212,7 @@ export default function Home() {
           </div>
         </div>
       </footer>
+          <ContactModal isOpen={modalOpen} onClose={() => setModalOpen(false)} locale={locale} />
     </main>
-      <ContactModal isOpen={modalOpen} onClose={() => setModalOpen(false)} locale={locale} />
   );
 }
