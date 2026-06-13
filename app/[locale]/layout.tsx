@@ -15,8 +15,23 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Dr. Asiia Vinograd | USMLE Educator",
-  description: "Practicing cardiologist and USMLE educator helping IMGs achieve their dreams.",
+  title: "Dr. Asiia Vinograd | USMLE Educator for IMGs",
+  description: "Practicing cardiologist and USMLE educator helping international medical graduates achieve their dreams of practicing medicine in the United States.",
+  keywords: ["USMLE", "Step 1", "IMG", "international medical graduate", "cardiology", "USMLE educator"],
+  openGraph: {
+    title: "Dr. Asiia Vinograd | USMLE Educator",
+    description: "Practicing cardiologist and USMLE educator helping IMGs succeed in the US.",
+    url: "https://drasiiavinograd.com",
+    siteName: "Dr. Asiia Vinograd",
+    images: [{ url: "https://drasiiavinograd.com/asiia.jpg", width: 800, height: 800, alt: "Dr. Asiia Vinograd" }],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Dr. Asiia Vinograd | USMLE Educator",
+    description: "Practicing cardiologist and USMLE educator helping IMGs succeed in the US.",
+    images: ["https://drasiiavinograd.com/asiia.jpg"],
+  },
 };
 
 export default async function LocaleLayout({
