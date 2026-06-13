@@ -1,6 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
+import Image from 'next/image';
 import { useRouter, usePathname } from 'next/navigation';
 
 export default function Home() {
@@ -104,7 +105,7 @@ export default function Home() {
           <h2 className="text-4xl md:text-5xl font-bold mb-16">{t('about.title')}</h2>
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="flex justify-center">
-              <img src="/asiia.jpg" alt="Dr. Asiia Vinograd" className="w-80 rounded-3xl object-cover object-top shadow-2xl" />
+              <Image src="/asiia.jpg" alt="Dr. Asiia Vinograd" width={320} height={420} className="rounded-3xl object-cover object-top shadow-2xl" priority />
             </div>
             <div>
               <p className="text-white/70 text-lg leading-relaxed mb-6">{t('about.p1')}</p>
