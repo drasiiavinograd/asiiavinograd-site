@@ -16,6 +16,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  icons: {
+    icon: '/favicon.svg',
+  },
   title: "Dr. Asiia Vinograd | USMLE Educator for IMGs",
   description: "Practicing cardiologist and USMLE educator helping international medical graduates achieve their dreams of practicing medicine in the United States.",
   keywords: ["USMLE", "Step 1", "IMG", "international medical graduate", "cardiology", "USMLE educator"],
