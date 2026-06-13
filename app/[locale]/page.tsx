@@ -17,12 +17,7 @@ export default function Home() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const switchLocale = (newLocale: string) => {
-    const newPath = newLocale === 'en'
-      ? pathname.replace('/ru', '') || '/'
-      : '/ru' + (pathname === '/' ? '' : pathname);
-    router.push(newPath);
-  };
+  const switchLocale = (newLocale: string) => { const path = window.location.pathname; if (newLocale === "en") { window.location.href = path.replace(/^/ru/, "") || "/"; return; } window.location.href = "/ru" + (path.startsWith("/ru") ? path.slice(3) : path); };
 
   const navLinks = [
     { key: 'about', label: t('nav.about') },
