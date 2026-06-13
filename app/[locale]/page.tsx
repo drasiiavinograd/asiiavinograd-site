@@ -125,6 +125,24 @@ export default function Home() {
         </div>
       </section>
 
+      
+      <section id="trending" className="py-24 px-6">
+        <div className="max-w-6xl mx-auto">
+          <p className="text-[#f47c5a] text-sm uppercase tracking-widest mb-3">{t('trending.tag')}</p>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">{t('trending.title')}</h2>
+          <p className="text-white/50 text-lg mb-16 max-w-2xl">{t('trending.desc')}</p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {(t.raw('trending.items') as {title: string, desc: string, tag: string}[]).map(item => (
+              <div key={item.title} className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-[#f47c5a]/40 transition-all">
+                <div className="text-[#4ecdc4] text-xs mb-3">{item.tag}</div>
+                <h3 className="font-semibold text-xl mb-3">{item.title}</h3>
+                <p className="text-white/50 text-sm leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section id="curriculum" className="py-24 px-6 bg-white/[0.02]">
         <div className="max-w-6xl mx-auto">
           <p className="text-[#f47c5a] text-sm uppercase tracking-widest mb-3">{t('curriculum.tag')}</p>
