@@ -297,5 +297,39 @@
         "highlight": false
       }
     ]
+  },
+  "faq": {
+    "badge": "FAQ",
+    "title": "Common questions",
+    "items": [
+      {
+        "q": "Who is this for?",
+        "a": "For international medical graduates (IMGs) from Russia, Kazakhstan, Ukraine, and other CIS countries who are preparing for USMLE Step 1. Whether you are just starting or already studying — Dr. Vinograd's content is designed for you."
+      },
+      {
+        "q": "Do I need to speak English well to study here?",
+        "a": "No. All lectures are available in both Russian and English. You can start in Russian and gradually switch to English — which is actually a great strategy for learning USMLE terminology naturally."
+      },
+      {
+        "q": "What is the difference between free and paid access?",
+        "a": "Free access includes all YouTube lectures and the Telegram community channel — which is already a lot. Paid access (Patreon or Tribute) adds Anki decks, PDF notes, mnemonics, and priority Q&A sessions with Dr. Vinograd."
+      },
+      {
+        "q": "Can I pay in rubles?",
+        "a": "Yes. Russian-speaking students can join via Tribute and pay in rubles. The price is approximately 2,800₽/month — the same content as Patreon."
+      },
+      {
+        "q": "Is Dr. Vinograd currently preparing for USMLE herself?",
+        "a": "Yes — she is actively preparing for Step 1 alongside her students. This means the content is current, practical, and built around what actually matters for the exam right now."
+      },
+      {
+        "q": "What topics are covered?",
+        "a": "All high-yield Step 1 disciplines: Microbiology, Pharmacology, Cardiology, Pathology, Biochemistry, Immunology, Renal & Respiratory, Neurology & Psychiatry — with clinical vignettes and diagnostic algorithms."
+      },
+      {
+        "q": "How do I get started?",
+        "a": "Start by watching the free YouTube lectures and joining the Telegram channel. When you are ready for more — join Patreon or Tribute for full access."
+      }
+    ]
   }
 }
