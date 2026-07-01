@@ -5,6 +5,7 @@ import Image from 'next/image';
 import ContactModal from '../../components/ContactModal';
 import ProblemSection from '../../components/ProblemSection';
 import PricingSection from '../../components/PricingSection';
+import FaqSection from '../../components/FaqSection';
 import { useRouter, usePathname } from 'next/navigation';
 
 export default function Home() {
@@ -190,6 +191,8 @@ export default function Home() {
       </section>
 
       <PricingSection />
+
+      <FaqSection />
 
       <section id="connect" className="py-24 px-6 bg-white/[0.02]">
         <div className="max-w-6xl mx-auto text-center">
