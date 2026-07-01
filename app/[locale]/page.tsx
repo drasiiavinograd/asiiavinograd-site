@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import Image from 'next/image';
 import ContactModal from '../../components/ContactModal';
+import ProblemSection from '../../components/ProblemSection';
 import { useRouter, usePathname } from 'next/navigation';
 
 export default function Home() {
@@ -103,6 +104,8 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      <ProblemSection />
 
       <section id="about" className="py-24 px-6">
         <div className="max-w-6xl mx-auto">
