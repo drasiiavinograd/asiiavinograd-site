@@ -4,6 +4,7 @@ import { useTranslations, useLocale } from 'next-intl';
 import Image from 'next/image';
 import ContactModal from '../../components/ContactModal';
 import ProblemSection from '../../components/ProblemSection';
+import PricingSection from '../../components/PricingSection';
 import { useRouter, usePathname } from 'next/navigation';
 
 export default function Home() {
@@ -36,6 +37,7 @@ export default function Home() {
     { key: 'about', label: t('nav.about') },
     { key: 'curriculum', label: t('nav.curriculum') },
     { key: 'lectures', label: t('nav.lectures') },
+    { key: 'pricing', label: t('nav.pricing') },
     { key: 'connect', label: t('nav.connect') },
   ];
 
@@ -186,6 +188,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <PricingSection />
 
       <section id="connect" className="py-24 px-6 bg-white/[0.02]">
         <div className="max-w-6xl mx-auto text-center">
