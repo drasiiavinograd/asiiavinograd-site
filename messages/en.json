@@ -237,5 +237,64 @@
       }
     },
     "cta": "Dr. Vinograd went through this — and built a system that works."
+  },
+  "pricing": {
+    "badge": "Pricing",
+    "title": "Choose your path",
+    "subtitle": "Start free. Study where it's comfortable for you — Telegram, YouTube, VK, or Patreon.",
+    "popular": "Most Popular",
+    "note": "No lock-in. Cancel or switch anytime.",
+    "plans": [
+      {
+        "tag": "Free",
+        "name": "Free Access",
+        "price": "$0",
+        "period": "forever",
+        "desc": "Everything you need to get started with USMLE prep.",
+        "features": [
+          "YouTube lectures (EN + RU)",
+          "Telegram community channel",
+          "Discord study group",
+          "Free lecture notes"
+        ],
+        "cta": "Start Free →",
+        "url": "https://t.me/usmle_vinograd",
+        "highlight": false
+      },
+      {
+        "tag": "Premium",
+        "name": "USMLE Club",
+        "price": "$30",
+        "period": "/month",
+        "desc": "Full access to all study materials and personal support.",
+        "features": [
+          "Everything in Free",
+          "Anki decks for every lecture",
+          "PDF notes & mnemonics",
+          "Priority Q&A with Dr. Vinograd",
+          "Exclusive clinical case breakdowns",
+          "Early access to new content"
+        ],
+        "cta": "Join on Patreon →",
+        "url": "https://patreon.com/drasiiavinograd",
+        "highlight": true
+      },
+      {
+        "tag": "Russian market",
+        "name": "Tribute Club",
+        "price": "~$28",
+        "period": "/month",
+        "desc": "Same full access — pay in rubles via Tribute.",
+        "features": [
+          "Everything in USMLE Club",
+          "Payment in rubles (RUB)",
+          "VK community access",
+          "Rutube & Yandex Dzen content"
+        ],
+        "cta": "Join on Tribute →",
+        "url": "https://tribute.tg/drasiiavinograd",
+        "highlight": false
+      }
+    ]
   }
 }
