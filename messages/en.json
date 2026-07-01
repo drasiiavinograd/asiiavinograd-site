@@ -205,5 +205,37 @@
         "tag": "Infectious Disease"
       }
     ]
+  },
+  "problem": {
+    "badge": "Sound familiar?",
+    "title": "The struggles every IMG knows",
+    "subtitle": "Most Russian-speaking IMGs face the same walls when preparing for USMLE.",
+    "items": {
+      "chaos": {
+        "title": "Too many resources, zero system",
+        "desc": "First Aid, Pathoma, Sketchy, UWorld. You switch all day and feel like you're going nowhere."
+      },
+      "language": {
+        "title": "Language barrier slows you down",
+        "desc": "You understand the medicine — but English explanations take twice as long to process."
+      },
+      "noSystem": {
+        "title": "No idea where to start",
+        "desc": "Everyone says 'just do UWorld' but nobody tells you what to read first, in what order, for how long."
+      },
+      "noProgress": {
+        "title": "No sense of progress",
+        "desc": "You study for weeks and still can't tell if you're actually ready for the exam."
+      },
+      "format": {
+        "title": "USMLE format feels foreign",
+        "desc": "Two-step clinical vignettes are nothing like the exams you took back home."
+      },
+      "alone": {
+        "title": "Studying alone is exhausting",
+        "desc": "No community, no one to ask, no accountability. Just you and a pile of PDFs."
+      }
+    },
+    "cta": "Dr. Vinograd went through this — and built a system that works."
   }
 }
