@@ -44,6 +44,7 @@ export default function Home() {
 
   const aboutItems = t.raw('about.items') as {label: string, sub: string}[];
   const curriculumItems = t.raw('curriculum.items') as {title: string, topics: string, free: boolean, slug: string}[];
+  const englishFeatures = t.raw('curriculum.english_features') as string[];
   const lectureItems = t.raw('lectures.items') as {tag: string, title: string, desc: string, url: string, soon: boolean}[];
   const platforms = t.raw('connect.platforms') as {name: string, sub: string, url: string}[];
 
@@ -156,6 +157,96 @@ export default function Home() {
               );
             })}
           </div>
+
+          {/* Anki блок */}
+          <div className="mt-16">
+            <div className="flex items-center gap-3 mb-6">
+              <span className="text-2xl">🃏</span>
+              <div>
+                <h3 className="text-xl font-bold text-white">{t('curriculum.anki_title')}</h3>
+                <p className="text-white/50 text-sm mt-1">{t('curriculum.anki_desc')}</p>
+              </div>
+            </div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
+              {curriculumItems.map((item, i) => {
+                const colors = ['#f47c5a','#4ecdc4','#a78bfa','#f59e0b','#34d399','#60a5fa','#f472b6','#fb923c'];
+                const color = colors[i % colors.length];
+                return (
+                  <a key={item.slug} href={`/${item.slug}#anki`}
+                    className="bg-white/5 border border-white/10 rounded-xl p-4 hover:bg-white/8 transition-all block group">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-sm font-medium group-hover:text-white transition-colors" style={{ color }}>{item.title}</span>
+                      {item.free
+                        ? <span className="text-xs px-2 py-0.5 rounded-full font-semibold" style={{ backgroundColor: color + '20', color }}>{t('curriculum.free_badge')}</span>
+                        : <span className="text-xs">🔒</span>
+                      }
+                    </div>
+                    <div className="text-white/30 text-xs">{t('curriculum.anki_title')}</div>
+                  </a>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Разборы задач блок */}
+          <div className="mt-12">
+            <div className="flex items-center gap-3 mb-6">
+              <span className="text-2xl">📝</span>
+              <div>
+                <h3 className="text-xl font-bold text-white">{t('curriculum.cases_title')}</h3>
+                <p className="text-white/50 text-sm mt-1">{t('curriculum.cases_desc')}</p>
+              </div>
+            </div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
+              {curriculumItems.map((item, i) => {
+                const colors = ['#f47c5a','#4ecdc4','#a78bfa','#f59e0b','#34d399','#60a5fa','#f472b6','#fb923c'];
+                const color = colors[i % colors.length];
+                return (
+                  <a key={item.slug} href={`/${item.slug}#cases`}
+                    className="bg-white/5 border border-white/10 rounded-xl p-4 hover:bg-white/8 transition-all block group">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-sm font-medium group-hover:text-white transition-colors" style={{ color }}>{item.title}</span>
+                      {item.free
+                        ? <span className="text-xs px-2 py-0.5 rounded-full font-semibold" style={{ backgroundColor: color + '20', color }}>{t('curriculum.free_badge')}</span>
+                        : <span className="text-xs">🔒</span>
+                      }
+                    </div>
+                    <div className="text-white/30 text-xs">{t('curriculum.cases_title')}</div>
+                  </a>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Медицинский английский блок */}
+          <div className="mt-12 bg-white/5 border border-[#e879f9]/30 rounded-2xl p-8">
+            <div className="flex items-center justify-between flex-wrap gap-4 mb-6">
+              <div className="flex items-center gap-3">
+                <span className="text-2xl">🇬🇧</span>
+                <div>
+                  <h3 className="text-xl font-bold text-[#e879f9]">{t('curriculum.english_title')}</h3>
+                  <p className="text-white/50 text-sm mt-1">{t('curriculum.english_desc')}</p>
+                </div>
+              </div>
+              <span className="text-xs font-semibold px-3 py-1 rounded-full bg-[#e879f9]/20 text-[#e879f9]">
+                {t('curriculum.english_badge_free')}
+              </span>
+            </div>
+            <div className="grid sm:grid-cols-2 gap-3">
+              {englishFeatures.map((feature, i) => (
+                <div key={i} className="flex items-center gap-2 text-sm">
+                  <span className={i === 0 ? 'text-[#e879f9]' : 'text-white/30'}>
+                    {i === 0 ? '✓' : '🔒'}
+                  </span>
+                  <span className={i === 0 ? 'text-white/80' : 'text-white/40'}>{feature}</span>
+                </div>
+              ))}
+            </div>
+            <a href="/medical-english" className="inline-block mt-6 text-sm font-medium text-[#e879f9] hover:text-white transition-colors">
+              {t('curriculum.english_title')} →
+            </a>
+          </div>
+
         </div>
       </section>
       <section id="trending" className="py-24 px-6">
