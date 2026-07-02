@@ -89,10 +89,11 @@ export default function Home() {
           <span className="w-2 h-2 bg-[#4ecdc4] rounded-full animate-pulse"></span>
           {t('hero.badge')}
         </div>
-        <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-4">{t('hero.title')}</h1>
-        <p className="text-3xl md:text-4xl font-light mb-6">
-          <span className="text-[#f47c5a]">MD</span>, <span className="text-[#4ecdc4]">PhD</span>
+        <p className="text-sm font-semibold uppercase tracking-widest text-white/40 mb-4">
+          <span className="text-[#f47c5a]">MD</span> · <span className="text-[#4ecdc4]">PhD</span>
         </p>
+        <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-4">{t('hero.title')}</h1>
+        <p className="text-2xl md:text-3xl font-semibold text-[#f47c5a] mb-6">{t('hero.slogan')}</p>
         <p className="text-white/60 text-lg md:text-xl max-w-2xl mb-10 leading-relaxed">{t('hero.desc')}</p>
         <div className="flex flex-col sm:flex-row gap-4">
           <a href="https://youtube.com/@USMLEforIMG" target="_blank" rel="noopener noreferrer" className="bg-[#f47c5a] hover:bg-[#e06b49] text-white px-8 py-3 rounded-full font-medium transition-colors">{t('hero.btn1')}</a>
