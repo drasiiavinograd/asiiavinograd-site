@@ -43,7 +43,7 @@ export default function Home() {
   ];
 
   const aboutItems = t.raw('about.items') as {label: string, sub: string}[];
-  const curriculumItems = t.raw('curriculum.items') as {title: string, topics: string}[];
+  const curriculumItems = t.raw('curriculum.items') as {title: string, topics: string, free: boolean, slug: string}[];
   const lectureItems = t.raw('lectures.items') as {tag: string, title: string, desc: string, url: string, soon: boolean}[];
   const platforms = t.raw('connect.platforms') as {name: string, sub: string, url: string}[];
 
@@ -115,26 +115,44 @@ export default function Home() {
           <p className="text-[#f47c5a] text-sm uppercase tracking-widest mb-3">{t('curriculum.tag')}</p>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">{t('curriculum.title')}</h2>
           <p className="text-white/50 text-lg mb-16 max-w-2xl">{t('curriculum.desc')}</p>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {curriculumItems.map((item, i) => {
               const colors = [
-                { num: '#f47c5a', border: 'hover:border-[#f47c5a]/50', bg: 'hover:bg-[#f47c5a]/5' },   // orange - Microbiology
-                { num: '#4ecdc4', border: 'hover:border-[#4ecdc4]/50', bg: 'hover:bg-[#4ecdc4]/5' },   // teal - Pharmacology
-                { num: '#a78bfa', border: 'hover:border-[#a78bfa]/50', bg: 'hover:bg-[#a78bfa]/5' },   // purple - Cardiology
-                { num: '#f59e0b', border: 'hover:border-[#f59e0b]/50', bg: 'hover:bg-[#f59e0b]/5' },   // amber - Pathology
-                { num: '#34d399', border: 'hover:border-[#34d399]/50', bg: 'hover:bg-[#34d399]/5' },   // green - GI
-                { num: '#60a5fa', border: 'hover:border-[#60a5fa]/50', bg: 'hover:bg-[#60a5fa]/5' },   // blue - Immunology
-                { num: '#f472b6', border: 'hover:border-[#f472b6]/50', bg: 'hover:bg-[#f472b6]/5' },   // pink - Nephrology
-                { num: '#fb923c', border: 'hover:border-[#fb923c]/50', bg: 'hover:bg-[#fb923c]/5' },   // orange2 - Neurology
+                '#f47c5a', // Microbiology - orange
+                '#4ecdc4', // Pharmacology - teal
+                '#a78bfa', // Cardiology - purple
+                '#f59e0b', // Pathology - amber
+                '#34d399', // GI - green
+                '#60a5fa', // Immunology - blue
+                '#f472b6', // Nephrology - pink
+                '#fb923c', // Neurology - orange2
+                '#e879f9', // Medical English - fuchsia
               ];
-              const c = colors[i % colors.length];
+              const color = colors[i % colors.length];
               return (
-                <div key={item.title} className={`bg-white/5 border border-white/10 rounded-2xl p-6 transition-all cursor-pointer ${c.border} ${c.bg}`}
-                  style={{ borderLeftWidth: '3px', borderLeftColor: c.num + '80' }}>
-                  <div className="text-xs font-mono mb-3" style={{ color: c.num }}>{String(i + 1).padStart(2, '0')}</div>
-                  <div className="font-semibold mb-2">{item.title}</div>
-                  <div className="text-white/40 text-sm leading-relaxed">{item.topics}</div>
-                </div>
+                <a key={item.title} href={`/${item.slug}`}
+                  className="group bg-white/5 border border-white/10 rounded-2xl p-6 transition-all cursor-pointer hover:bg-white/8 block"
+                  style={{ borderLeftWidth: '3px', borderLeftColor: color + '90' }}>
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="text-xs font-mono" style={{ color }}>{String(i + 1).padStart(2, '0')}</div>
+                    {item.free ? (
+                      <span className="text-xs font-semibold px-2 py-0.5 rounded-full" style={{ backgroundColor: color + '20', color }}>
+                        {t('curriculum.free_badge')}
+                      </span>
+                    ) : (
+                      <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-white/10 text-white/40">
+                        {t('curriculum.paid_badge')}
+                      </span>
+                    )}
+                  </div>
+                  <div className="font-semibold mb-2 group-hover:text-white transition-colors" style={{ color }}>{item.title}</div>
+                  <div className="text-white/40 text-sm leading-relaxed mb-4">{item.topics}</div>
+                  <div className="flex gap-3 text-xs text-white/30">
+                    <span>📹 {item.free ? t('curriculum.free_badge') : '🔒'} Лекции</span>
+                    <span>🃏 {item.free ? t('curriculum.free_badge') : '🔒'} Anki</span>
+                    <span>📝 {item.free ? t('curriculum.free_badge') : '🔒'} Задачи</span>
+                  </div>
+                </a>
               );
             })}
           </div>
