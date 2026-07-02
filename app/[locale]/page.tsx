@@ -136,22 +136,18 @@ export default function Home() {
                   style={{ borderLeftWidth: '3px', borderLeftColor: color + '90' }}>
                   <div className="flex items-center justify-between mb-3">
                     <div className="text-xs font-mono" style={{ color }}>{String(i + 1).padStart(2, '0')}</div>
-                    {item.free ? (
+                    {item.free && (
                       <span className="text-xs font-semibold px-2 py-0.5 rounded-full" style={{ backgroundColor: color + '20', color }}>
                         {t('curriculum.free_badge')}
-                      </span>
-                    ) : (
-                      <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-white/10 text-white/40">
-                        {t('curriculum.paid_badge')}
                       </span>
                     )}
                   </div>
                   <div className="font-semibold mb-2 group-hover:text-white transition-colors" style={{ color }}>{item.title}</div>
                   <div className="text-white/40 text-sm leading-relaxed mb-4">{item.topics}</div>
-                  <div className="flex gap-3 text-xs text-white/30">
-                    <span>📹 {item.free ? t('curriculum.free_badge') : '🔒'} Лекции</span>
-                    <span>🃏 {item.free ? t('curriculum.free_badge') : '🔒'} Anki</span>
-                    <span>📝 {item.free ? t('curriculum.free_badge') : '🔒'} Задачи</span>
+                  <div className="flex gap-4 text-xs text-white/30 mt-3">
+                    <span>Лекции</span>
+                    <span>Anki</span>
+                    <span>Задачи</span>
                   </div>
                 </a>
               );
@@ -160,73 +156,54 @@ export default function Home() {
 
           {/* Anki блок */}
           <div className="mt-16">
-            <div className="flex items-center gap-3 mb-6">
-              <span className="text-2xl">🃏</span>
-              <div>
-                <h3 className="text-xl font-bold text-white">{t('curriculum.anki_title')}</h3>
-                <p className="text-white/50 text-sm mt-1">{t('curriculum.anki_desc')}</p>
-              </div>
+            <div className="mb-6">
+              <h3 className="text-xl font-bold text-white">{t('curriculum.anki_title')}</h3>
+              <p className="text-white/50 text-sm mt-1">{t('curriculum.anki_desc')}</p>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
-              {curriculumItems.map((item, i) => {
-                const colors = ['#f47c5a','#4ecdc4','#a78bfa','#f59e0b','#34d399','#60a5fa','#f472b6','#fb923c'];
-                const color = colors[i % colors.length];
-                return (
-                  <a key={item.slug} href={`/${item.slug}#anki`}
-                    className="bg-white/5 border border-white/10 rounded-xl p-4 hover:bg-white/8 transition-all block group">
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-sm font-medium group-hover:text-white transition-colors" style={{ color }}>{item.title}</span>
-                      {item.free
-                        ? <span className="text-xs px-2 py-0.5 rounded-full font-semibold" style={{ backgroundColor: color + '20', color }}>{t('curriculum.free_badge')}</span>
-                        : <span className="text-xs">🔒</span>
-                      }
-                    </div>
-                    <div className="text-white/30 text-xs">{t('curriculum.anki_title')}</div>
-                  </a>
-                );
-              })}
+              {curriculumItems.map((item) => (
+                <a key={item.slug} href={`/${item.slug}#anki`}
+                  className="bg-white/5 border border-white/10 rounded-xl p-4 hover:bg-[#f47c5a]/5 hover:border-[#f47c5a]/30 transition-all block group">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-sm font-medium text-white/70 group-hover:text-[#f47c5a] transition-colors">{item.title}</span>
+                    {item.free && (
+                      <span className="text-xs px-2 py-0.5 rounded-full font-semibold bg-[#f47c5a]/20 text-[#f47c5a]">{t('curriculum.free_badge')}</span>
+                    )}
+                  </div>
+                  <div className="text-white/30 text-xs">{t('curriculum.anki_title')}</div>
+                </a>
+              ))}
             </div>
           </div>
 
           {/* Разборы задач блок */}
-          <div className="mt-12">
-            <div className="flex items-center gap-3 mb-6">
-              <span className="text-2xl">📝</span>
-              <div>
-                <h3 className="text-xl font-bold text-white">{t('curriculum.cases_title')}</h3>
-                <p className="text-white/50 text-sm mt-1">{t('curriculum.cases_desc')}</p>
-              </div>
+          <div className="mt-10">
+            <div className="mb-6">
+              <h3 className="text-xl font-bold text-white">{t('curriculum.cases_title')}</h3>
+              <p className="text-white/50 text-sm mt-1">{t('curriculum.cases_desc')}</p>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
-              {curriculumItems.map((item, i) => {
-                const colors = ['#f47c5a','#4ecdc4','#a78bfa','#f59e0b','#34d399','#60a5fa','#f472b6','#fb923c'];
-                const color = colors[i % colors.length];
-                return (
-                  <a key={item.slug} href={`/${item.slug}#cases`}
-                    className="bg-white/5 border border-white/10 rounded-xl p-4 hover:bg-white/8 transition-all block group">
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-sm font-medium group-hover:text-white transition-colors" style={{ color }}>{item.title}</span>
-                      {item.free
-                        ? <span className="text-xs px-2 py-0.5 rounded-full font-semibold" style={{ backgroundColor: color + '20', color }}>{t('curriculum.free_badge')}</span>
-                        : <span className="text-xs">🔒</span>
-                      }
-                    </div>
-                    <div className="text-white/30 text-xs">{t('curriculum.cases_title')}</div>
-                  </a>
-                );
-              })}
+              {curriculumItems.map((item) => (
+                <a key={item.slug} href={`/${item.slug}#cases`}
+                  className="bg-white/5 border border-white/10 rounded-xl p-4 hover:bg-[#4ecdc4]/5 hover:border-[#4ecdc4]/30 transition-all block group">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-sm font-medium text-white/70 group-hover:text-[#4ecdc4] transition-colors">{item.title}</span>
+                    {item.free && (
+                      <span className="text-xs px-2 py-0.5 rounded-full font-semibold bg-[#4ecdc4]/20 text-[#4ecdc4]">{t('curriculum.free_badge')}</span>
+                    )}
+                  </div>
+                  <div className="text-white/30 text-xs">{t('curriculum.cases_title')}</div>
+                </a>
+              ))}
             </div>
           </div>
 
-          {/* Медицинский английский блок */}
-          <div className="mt-12 bg-white/5 border border-[#e879f9]/30 rounded-2xl p-8">
-            <div className="flex items-center justify-between flex-wrap gap-4 mb-6">
-              <div className="flex items-center gap-3">
-                <span className="text-2xl">🇬🇧</span>
-                <div>
-                  <h3 className="text-xl font-bold text-[#e879f9]">{t('curriculum.english_title')}</h3>
-                  <p className="text-white/50 text-sm mt-1">{t('curriculum.english_desc')}</p>
-                </div>
+          {/* Медицинский английский */}
+          <div className="mt-10 bg-white/5 border border-[#e879f9]/20 rounded-2xl p-8">
+            <div className="flex items-start justify-between flex-wrap gap-4 mb-6">
+              <div>
+                <h3 className="text-xl font-bold text-[#e879f9]">{t('curriculum.english_title')}</h3>
+                <p className="text-white/50 text-sm mt-1">{t('curriculum.english_desc')}</p>
               </div>
               <span className="text-xs font-semibold px-3 py-1 rounded-full bg-[#e879f9]/20 text-[#e879f9]">
                 {t('curriculum.english_badge_free')}
@@ -235,10 +212,8 @@ export default function Home() {
             <div className="grid sm:grid-cols-2 gap-3">
               {englishFeatures.map((feature, i) => (
                 <div key={i} className="flex items-center gap-2 text-sm">
-                  <span className={i === 0 ? 'text-[#e879f9]' : 'text-white/30'}>
-                    {i === 0 ? '✓' : '🔒'}
-                  </span>
-                  <span className={i === 0 ? 'text-white/80' : 'text-white/40'}>{feature}</span>
+                  <div className={`w-1 h-1 rounded-full shrink-0 ${i === 0 ? 'bg-[#e879f9]' : 'bg-white/20'}`} />
+                  <span className={i === 0 ? 'text-white/80' : 'text-white/35'}>{feature}</span>
                 </div>
               ))}
             </div>
