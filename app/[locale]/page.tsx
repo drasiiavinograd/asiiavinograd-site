@@ -167,19 +167,9 @@ export default function Home() {
           <div className="mt-20">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">{t('curriculum.cases_title')}</h2>
             <p className="text-white/50 text-lg mb-8 max-w-2xl">{t('curriculum.cases_desc')}</p>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
-              {curriculumItems.map((item) => (
-                <a key={item.slug} href={`/${item.slug}#cases`}
-                  className="bg-white/5 border border-white/10 rounded-xl p-4 hover:bg-[#4ecdc4]/5 hover:border-[#4ecdc4]/30 transition-all block group">
-                  <div className="flex items-center justify-between mb-1">
-                    <span className="text-sm font-medium text-white/70 group-hover:text-[#4ecdc4] transition-colors">{item.title}</span>
-                    {item.free && (
-                      <span className="text-xs px-2 py-0.5 rounded-full font-semibold bg-[#4ecdc4]/20 text-[#4ecdc4]">{t('curriculum.free_badge')}</span>
-                    )}
-                  </div>
-                </a>
-              ))}
-            </div>
+            <a href="/cases" className="inline-flex items-center gap-2 bg-[#4ecdc4] hover:bg-[#3ab8b0] text-[#0a0f1e] px-8 py-3 rounded-full font-medium transition-colors">
+              {t('curriculum.cases_cta')}
+            </a>
           </div>
 
           {/* Медицинский английский */}
