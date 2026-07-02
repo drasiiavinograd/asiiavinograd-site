@@ -109,6 +109,58 @@ export default function Home() {
         </div>
       </section>
 
+
+      <section id="curriculum" className="py-24 px-6 bg-white/[0.02]">
+        <div className="max-w-6xl mx-auto">
+          <p className="text-[#f47c5a] text-sm uppercase tracking-widest mb-3">{t('curriculum.tag')}</p>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">{t('curriculum.title')}</h2>
+          <p className="text-white/50 text-lg mb-16 max-w-2xl">{t('curriculum.desc')}</p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {curriculumItems.map((item, i) => (
+              <div key={item.title} className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-[#4ecdc4]/40 transition-all">
+                <div className="text-[#4ecdc4] text-xs font-mono mb-3">{String(i + 1).padStart(2, '0')}</div>
+                <div className="font-semibold mb-2">{item.title}</div>
+                <div className="text-white/40 text-sm leading-relaxed">{item.topics}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section id="trending" className="py-24 px-6">
+        <div className="max-w-6xl mx-auto">
+          <p className="text-[#f47c5a] text-sm uppercase tracking-widest mb-3">{t('trending.tag')}</p>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">{t('trending.title')}</h2>
+          <p className="text-white/50 text-lg mb-16 max-w-2xl">{t('trending.desc')}</p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {(t.raw('trending.items') as {title: string, desc: string, tag: string}[]).map(item => (
+              <div key={item.title} className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-[#f47c5a]/40 transition-all">
+                <div className="text-[#4ecdc4] text-xs mb-3">{item.tag}</div>
+                <h3 className="font-semibold text-xl mb-3">{item.title}</h3>
+                <p className="text-white/50 text-sm leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="lectures" className="py-24 px-6">
+        <div className="max-w-6xl mx-auto">
+          <p className="text-[#f47c5a] text-sm uppercase tracking-widest mb-3">{t('lectures.tag')}</p>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">{t('lectures.title')}</h2>
+          <p className="text-white/50 text-lg mb-16 max-w-2xl">{t('lectures.desc')}</p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {lectureItems.map(lecture => (
+              <a key={lecture.title} href={lecture.url} target="_blank" rel="noopener noreferrer" className="group bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-[#f47c5a]/40 transition-all block">
+                <div className="text-[#4ecdc4] text-xs mb-3">{lecture.tag}</div>
+                <h3 className="font-semibold text-lg mb-2 group-hover:text-[#f47c5a] transition-colors">{lecture.title}</h3>
+                <p className="text-white/50 text-sm leading-relaxed mb-4">{lecture.desc}</p>
+                <span className="text-[#f47c5a] text-sm">{lecture.soon ? t('lectures.joinBtn') : t('lectures.watchBtn')}</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <ProblemSection />
 
       <section id="about" className="py-24 px-6">
@@ -134,59 +186,6 @@ export default function Home() {
                 ))}
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      
-      <section id="trending" className="py-24 px-6">
-        <div className="max-w-6xl mx-auto">
-          <p className="text-[#f47c5a] text-sm uppercase tracking-widest mb-3">{t('trending.tag')}</p>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">{t('trending.title')}</h2>
-          <p className="text-white/50 text-lg mb-16 max-w-2xl">{t('trending.desc')}</p>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {(t.raw('trending.items') as {title: string, desc: string, tag: string}[]).map(item => (
-              <div key={item.title} className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-[#f47c5a]/40 transition-all">
-                <div className="text-[#4ecdc4] text-xs mb-3">{item.tag}</div>
-                <h3 className="font-semibold text-xl mb-3">{item.title}</h3>
-                <p className="text-white/50 text-sm leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="curriculum" className="py-24 px-6 bg-white/[0.02]">
-        <div className="max-w-6xl mx-auto">
-          <p className="text-[#f47c5a] text-sm uppercase tracking-widest mb-3">{t('curriculum.tag')}</p>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">{t('curriculum.title')}</h2>
-          <p className="text-white/50 text-lg mb-16 max-w-2xl">{t('curriculum.desc')}</p>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {curriculumItems.map((item, i) => (
-              <div key={item.title} className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-[#4ecdc4]/40 transition-all">
-                <div className="text-[#4ecdc4] text-xs font-mono mb-3">{String(i + 1).padStart(2, '0')}</div>
-                <div className="font-semibold mb-2">{item.title}</div>
-                <div className="text-white/40 text-sm leading-relaxed">{item.topics}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="lectures" className="py-24 px-6">
-        <div className="max-w-6xl mx-auto">
-          <p className="text-[#f47c5a] text-sm uppercase tracking-widest mb-3">{t('lectures.tag')}</p>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">{t('lectures.title')}</h2>
-          <p className="text-white/50 text-lg mb-16 max-w-2xl">{t('lectures.desc')}</p>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {lectureItems.map(lecture => (
-              <a key={lecture.title} href={lecture.url} target="_blank" rel="noopener noreferrer" className="group bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-[#f47c5a]/40 transition-all block">
-                <div className="text-[#4ecdc4] text-xs mb-3">{lecture.tag}</div>
-                <h3 className="font-semibold text-lg mb-2 group-hover:text-[#f47c5a] transition-colors">{lecture.title}</h3>
-                <p className="text-white/50 text-sm leading-relaxed mb-4">{lecture.desc}</p>
-                <span className="text-[#f47c5a] text-sm">{lecture.soon ? t('lectures.joinBtn') : t('lectures.watchBtn')}</span>
-              </a>
-            ))}
           </div>
         </div>
       </section>
