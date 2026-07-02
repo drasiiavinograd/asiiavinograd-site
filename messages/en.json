@@ -133,7 +133,9 @@
       "Patient communication scripts — Premium"
     ],
     "anki_cta": "Download Anki Decks — Free",
-    "cases_cta": "Access Clinical Cases — by subscription"
+    "cases_cta": "Access Clinical Cases — by subscription",
+    "anki_btn_free": "Download Free",
+    "anki_btn_sub": "Download All — by subscription"
   },
   "lectures": {
     "tag": "Lectures",
