@@ -162,16 +162,9 @@ export default function Home() {
               <div className="text-white/30 text-xs font-mono mb-4">01</div>
               <h2 className="text-3xl md:text-4xl font-bold mb-3 text-white">{t('curriculum.anki_title')}</h2>
               <p className="text-white/50 text-sm leading-relaxed flex-1 mb-6">{t('curriculum.anki_desc')}</p>
-              <div className="flex flex-col gap-2">
-                <a href="/anki" className="bg-[#f47c5a] hover:bg-[#e06b49] text-white text-sm font-medium px-5 py-2.5 rounded-full text-center transition-colors">
-                  {t('curriculum.anki_btn_free')}
-                </a>
-                {t('curriculum.anki_btn_sub') && (
-                  <a href="/anki#english" className="border border-white/20 hover:border-white/40 text-white/70 hover:text-white text-sm font-medium px-5 py-2.5 rounded-full text-center transition-colors">
-                    {t('curriculum.anki_btn_sub')}
-                  </a>
-                )}
-              </div>
+              <span className="inline-flex items-center gap-2 text-sm font-medium text-[#f47c5a]">
+                {t('curriculum.anki_cta')} →
+              </span>
             </a>
 
             {/* Разборы задач */}
