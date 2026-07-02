@@ -59,42 +59,66 @@
   },
   "curriculum": {
     "tag": "Curriculum",
-    "title": "USMLE Step 1 Topics",
-    "desc": "All high-yield topics for Step 1 success — with clinical vignettes and diagnostic algorithms",
+    "title": "Sections",
+    "desc": "All high-yield Step 1 disciplines — with lectures, Anki decks and clinical case breakdowns",
     "items": [
       {
         "title": "Microbiology",
-        "topics": "Gram+ & Gram− bacteria, Viruses, Fungi, Parasites, Antibiotics"
+        "topics": "Gram+ & Gram− bacteria, Viruses, Fungi, Parasites, Antibiotics",
+        "free": true,
+        "slug": "microbiology"
       },
       {
         "title": "Pharmacology",
-        "topics": "Antibiotics, Cardiovascular drugs, Autonomic, CNS drugs"
+        "topics": "Antibiotics, Cardiovascular drugs, Autonomic, CNS drugs",
+        "free": false,
+        "slug": "pharmacology"
       },
       {
         "title": "Cardiology",
-        "topics": "Physiology, ECG, Heart failure, Arrhythmias"
+        "topics": "Physiology, ECG, Heart failure, Arrhythmias",
+        "free": false,
+        "slug": "cardiology"
       },
       {
         "title": "Pathology",
-        "topics": "Inflammation, Neoplasia, Cell injury, Hemodynamics"
+        "topics": "Inflammation, Neoplasia, Cell injury, Hemodynamics",
+        "free": false,
+        "slug": "pathology"
       },
       {
         "title": "GI & Liver",
-        "topics": "Gastroenterology, Hepatology, Pancreas, Biliary system"
+        "topics": "Gastroenterology, Hepatology, Pancreas, Biliary system",
+        "free": false,
+        "slug": "gi-hepatology"
       },
       {
         "title": "Immunology",
-        "topics": "Innate & adaptive, Hypersensitivity, Immunodeficiencies"
+        "topics": "Innate & adaptive, Hypersensitivity, Immunodeficiencies",
+        "free": false,
+        "slug": "immunology"
       },
       {
         "title": "Nephrology & Pulmonology",
-        "topics": "Physiology, Acid-base, Diuretics, Lung pathology"
+        "topics": "Physiology, Acid-base, Diuretics, Lung pathology",
+        "free": false,
+        "slug": "nephrology-pulmonology"
       },
       {
         "title": "Neurology & Psychiatry",
-        "topics": "CNS anatomy, Dementia, Movement disorders, Psychopharmacology"
+        "topics": "CNS anatomy, Dementia, Movement disorders, Psychopharmacology",
+        "free": false,
+        "slug": "neurology-psychiatry"
+      },
+      {
+        "title": "Medical English",
+        "topics": "Terminology, Clinical vocabulary, Patient communication, USMLE language",
+        "free": false,
+        "slug": "medical-english"
       }
-    ]
+    ],
+    "free_badge": "Free",
+    "paid_badge": "Premium"
   },
   "lectures": {
     "tag": "Lectures",
