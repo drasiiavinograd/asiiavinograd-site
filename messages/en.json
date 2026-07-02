@@ -116,7 +116,7 @@
     "anki_title": "Anki Decks",
     "anki_desc": "Spaced repetition cards for every discipline — free for Microbiology, premium for the rest",
     "cases_title": "Clinical Cases",
-    "cases_desc": "USMLE-style clinical vignettes by discipline — free for Microbiology, premium for the rest",
+    "cases_desc": "Original clinical vignettes in USMLE format — available by subscription",
     "english_title": "Medical English",
     "english_desc": "Terminology, clinical vocabulary, patient communication and USMLE language",
     "english_badge_free": "Some free",
@@ -126,7 +126,8 @@
       "USMLE question language — Premium",
       "Patient communication scripts — Premium"
     ],
-    "anki_cta": "Download Anki Decks — by subscription"
+    "anki_cta": "Download Anki Decks — by subscription",
+    "cases_cta": "Access Clinical Cases — by subscription"
   },
   "lectures": {
     "tag": "Lectures",
