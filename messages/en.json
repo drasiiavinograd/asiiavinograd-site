@@ -5,13 +5,14 @@
     "lectures": "Lectures",
     "connect": "Connect",
     "cta": "Get in Touch",
-    "pricing": "Pricing"
+    "pricing": "Pricing",
+    "siteTitle": "USMLE with Dr. Vinograd"
   },
   "hero": {
     "badge": "Accepting New Students",
     "title": "Dr. Asiia Vinograd",
     "subtitle": "MD, PhD",
-    "desc": "Practicing cardiologist and USMLE educator helping international medical graduates achieve their dreams of practicing medicine in the United States.",
+    "desc": "Preparing for USMLE Step 1 together — high-yield lectures, clinical cases and study materials for international medical graduates.",
     "btn1": "Watch Lectures",
     "btn2": "Learn More",
     "stat1value": "4",
@@ -77,15 +78,15 @@
         "topics": "Inflammation, Neoplasia, Cell injury, Hemodynamics"
       },
       {
-        "title": "Biochemistry",
-        "topics": "Metabolism, Genetics, Molecular biology, Vitamins"
+        "title": "GI & Liver",
+        "topics": "Gastroenterology, Hepatology, Pancreas, Biliary system"
       },
       {
         "title": "Immunology",
         "topics": "Innate & adaptive, Hypersensitivity, Immunodeficiencies"
       },
       {
-        "title": "Renal & Respiratory",
+        "title": "Nephrology & Pulmonology",
         "topics": "Physiology, Acid-base, Diuretics, Lung pathology"
       },
       {
@@ -96,8 +97,8 @@
   },
   "lectures": {
     "tag": "Lectures",
-    "title": "Featured Videos",
-    "desc": "Step 1 content built around the most testable concepts",
+    "title": "Free Lectures",
+    "desc": "High-yield concepts explained in plain language",
     "items": [
       {
         "tag": "Microbiology · Step 1",
@@ -121,23 +122,23 @@
         "soon": false
       },
       {
-        "tag": "Coming Soon · Step 1",
-        "title": "Pharmacology — Antibiotics",
+        "tag": "Cardiology · Step 1",
+        "title": "ECG — Made Simple",
+        "desc": "Systematic ECG reading from scratch: rhythm, axis, intervals, patterns.",
+        "url": "https://patreon.com/drasiiavinograd",
+        "soon": true
+      },
+      {
+        "tag": "Pharmacology · Step 1",
+        "title": "Antibiotics — Complete Guide",
         "desc": "Mechanism of action, resistance patterns, and clinical indications.",
         "url": "https://patreon.com/drasiiavinograd",
         "soon": true
       },
       {
-        "tag": "Coming Soon · Step 1",
-        "title": "Pathology — Inflammation & Repair",
-        "desc": "Acute vs chronic inflammation, wound healing, granuloma formation.",
-        "url": "https://patreon.com/drasiiavinograd",
-        "soon": true
-      },
-      {
-        "tag": "Coming Soon · Step 1",
-        "title": "Cardiology — ECG & Arrhythmias",
-        "desc": "Systematic ECG reading, arrhythmia mechanisms, and high-yield pharmacology.",
+        "tag": "Reproductive · Step 1",
+        "title": "Reproductive System Anatomy",
+        "desc": "Male and female reproductive anatomy, hormones and clinical correlations.",
         "url": "https://patreon.com/drasiiavinograd",
         "soon": true
       }
@@ -242,7 +243,7 @@
   "pricing": {
     "badge": "Pricing",
     "title": "Choose your path",
-    "subtitle": "Start free. Study where it's comfortable for you — Telegram, YouTube, VK, or Patreon.",
+    "subtitle": "Start free. Study where it's comfortable for you — Telegram, YouTube, or through the website.",
     "popular": "Most Popular",
     "note": "No lock-in. Cancel or switch anytime.",
     "plans": [
@@ -251,12 +252,11 @@
         "name": "Free Access",
         "price": "$0",
         "period": "forever",
-        "desc": "Everything you need to get started with USMLE prep.",
+        "desc": "Everything you need to get started with USMLE prep right now.",
         "features": [
-          "YouTube lectures (EN + RU)",
-          "Telegram community channel",
-          "Discord study group",
-          "Free lecture notes"
+          "YouTube lectures (EN)",
+          "Telegram channel with updates and case breakdowns",
+          "Study guides and free lecture notes"
         ],
         "cta": "Start Free →",
         "url": "https://t.me/usmle_vinograd",
@@ -267,34 +267,17 @@
         "name": "USMLE Club",
         "price": "$30",
         "period": "/month",
-        "desc": "Full access to all study materials and personal support.",
+        "desc": "Full access to all study materials and personal support from Dr. Asiia Vinograd.",
         "features": [
           "Everything in Free",
           "Anki decks for every lecture",
-          "PDF notes & mnemonics",
-          "Priority Q&A with Dr. Vinograd",
-          "Exclusive clinical case breakdowns",
-          "Early access to new content"
+          "PDF notes",
+          "Clinical case breakdowns",
+          "1 personal consultation call"
         ],
-        "cta": "Join on Patreon →",
+        "cta": "Join USMLE Club →",
         "url": "https://patreon.com/drasiiavinograd",
         "highlight": true
-      },
-      {
-        "tag": "Russian market",
-        "name": "Tribute Club",
-        "price": "~$28",
-        "period": "/month",
-        "desc": "Same full access — pay in rubles via Tribute.",
-        "features": [
-          "Everything in USMLE Club",
-          "Payment in rubles (RUB)",
-          "VK community access",
-          "Rutube & Yandex Dzen content"
-        ],
-        "cta": "Join on Tribute →",
-        "url": "https://tribute.tg/drasiiavinograd",
-        "highlight": false
       }
     ]
   },
@@ -304,19 +287,19 @@
     "items": [
       {
         "q": "Who is this for?",
-        "a": "For international medical graduates (IMGs) from Russia, Kazakhstan, Ukraine, and other CIS countries who are preparing for USMLE Step 1. Whether you are just starting or already studying — Dr. Vinograd's content is designed for you."
+        "a": "For international medical graduates (IMGs) from Russia, Kazakhstan, Ukraine, and other CIS countries preparing for USMLE Step 1. Whether you are just starting or already studying — Dr. Vinograd's content is designed for you."
       },
       {
         "q": "Do I need to speak English well to study here?",
-        "a": "No. All lectures are available in both Russian and English. You can start in Russian and gradually switch to English — which is actually a great strategy for learning USMLE terminology naturally."
+        "a": "No. All lectures are available in both Russian and English. You can start in Russian and gradually switch to English — which is a great strategy for learning USMLE terminology naturally."
       },
       {
         "q": "What is the difference between free and paid access?",
-        "a": "Free access includes all YouTube lectures and the Telegram community channel — which is already a lot. Paid access (Patreon or Tribute) adds Anki decks, PDF notes, mnemonics, and priority Q&A sessions with Dr. Vinograd."
+        "a": "Free access includes YouTube lectures, the Telegram channel with updates and case breakdowns, and free lecture notes. Paid access (USMLE Club) adds Anki decks, PDF notes, clinical case breakdowns, and a personal consultation call with Dr. Vinograd. You can also subscribe directly through the website."
       },
       {
-        "q": "Can I pay in rubles?",
-        "a": "Yes. Russian-speaking students can join via Tribute and pay in rubles. The price is approximately 2,800₽/month — the same content as Patreon."
+        "q": "Can I pay in rubles or other currencies?",
+        "a": "Yes — all payment methods are available on the website, including card payments in rubles and other currencies."
       },
       {
         "q": "Is Dr. Vinograd currently preparing for USMLE herself?",
@@ -324,11 +307,11 @@
       },
       {
         "q": "What topics are covered?",
-        "a": "All high-yield Step 1 disciplines: Microbiology, Pharmacology, Cardiology, Pathology, Biochemistry, Immunology, Renal & Respiratory, Neurology & Psychiatry — with clinical vignettes and diagnostic algorithms."
+        "a": "All high-yield Step 1 disciplines: Microbiology, Pharmacology, Cardiology, Pathology, GI & Liver, Immunology, Nephrology & Pulmonology, Neurology & Psychiatry — with clinical vignettes and diagnostic algorithms."
       },
       {
         "q": "How do I get started?",
-        "a": "Start by watching the free YouTube lectures and joining the Telegram channel. When you are ready for more — join Patreon or Tribute for full access."
+        "a": "Start by watching the free YouTube lectures and joining the Telegram channel. When you are ready for more — subscribe to USMLE Club through the website or Patreon."
       }
     ]
   }
