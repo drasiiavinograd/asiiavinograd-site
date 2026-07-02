@@ -1,6 +1,7 @@
 'use client';
-import { useTranslations, useLocale } from 'next-intl';
-import { useRouter } from 'next/navigation';
+import { useLocale } from 'next-intl';
+import NavBar from '../../../components/NavBar';
+import Footer from '../../../components/Footer';
 
 const DECKS = [
   { slug: 'microbiology', color: '#f47c5a', cards: 320 },
@@ -15,7 +16,6 @@ const DECKS = [
 
 export default function AnkiPage() {
   const locale = useLocale();
-  const router = useRouter();
 
   const names: Record<string, { en: string; ru: string }> = {
     'microbiology':            { en: 'Microbiology',             ru: 'Микробиология' },
@@ -32,13 +32,15 @@ export default function AnkiPage() {
   const totalCards = DECKS.reduce((sum, d) => sum + d.cards, 0);
 
   return (
-    <main className="bg-[#0a0f1e] text-white min-h-screen font-sans">
+    <>
+      <NavBar />
+      <main className="bg-[#0a0f1e] text-white min-h-screen font-sans">
       <div className="max-w-5xl mx-auto px-6 py-24">
 
         {/* Back */}
-        <button onClick={() => router.back()} className="text-white/40 hover:text-white text-sm mb-12 transition-colors">
+        <a href={isRu ? '/ru' : '/'} className="text-white/40 hover:text-white text-sm mb-12 transition-colors inline-block">
           ← {isRu ? 'Назад' : 'Back'}
-        </button>
+        </a>
 
         {/* Header */}
         <div className="mb-6">
@@ -127,5 +129,7 @@ export default function AnkiPage() {
 
       </div>
     </main>
+      <Footer />
+    </>
   );
 }
