@@ -166,10 +166,11 @@ export default function Home() {
                 <a href="/anki" className="bg-[#f47c5a] hover:bg-[#e06b49] text-white text-sm font-medium px-5 py-2.5 rounded-full text-center transition-colors">
                   {t('curriculum.anki_btn_free')}
                 </a>
-                <a href="https://patreon.com/drasiiavinograd" target="_blank" rel="noopener noreferrer"
-                  className="border border-white/20 hover:border-white/40 text-white/70 hover:text-white text-sm font-medium px-5 py-2.5 rounded-full text-center transition-colors">
-                  {t('curriculum.anki_btn_sub')}
-                </a>
+                {t('curriculum.anki_btn_sub') && (
+                  <a href="/anki#english" className="border border-white/20 hover:border-white/40 text-white/70 hover:text-white text-sm font-medium px-5 py-2.5 rounded-full text-center transition-colors">
+                    {t('curriculum.anki_btn_sub')}
+                  </a>
+                )}
               </div>
             </a>
 
