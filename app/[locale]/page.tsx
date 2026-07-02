@@ -191,7 +191,7 @@ export default function Home() {
                 ))}
               </div>
               <span className="inline-flex items-center gap-2 text-sm font-medium text-[#e879f9]">
-                {t('curriculum.english_title')} →
+                {t('curriculum.english_cta')} →
               </span>
             </a>
 
