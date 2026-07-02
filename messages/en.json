@@ -109,12 +109,18 @@
         "topics": "CNS anatomy, Dementia, Movement disorders, Psychopharmacology",
         "free": false,
         "slug": "neurology-psychiatry"
+      },
+      {
+        "title": "Gastroenterology",
+        "topics": "GI physiology, Peptic ulcer, IBD, Liver diseases, Colorectal cancer",
+        "free": false,
+        "slug": "gastroenterology"
       }
     ],
     "free_badge": "Free",
     "paid_badge": "Premium",
     "anki_title": "Anki Decks",
-    "anki_desc": "Spaced repetition cards for every USMLE Step 1 discipline — in Russian. Free.",
+    "anki_desc": "Spaced repetition cards for every discipline — in Russian. Free.",
     "cases_title": "Clinical Cases",
     "cases_desc": "Original clinical vignettes in USMLE format — available by subscription",
     "english_title": "Medical English",
