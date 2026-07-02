@@ -51,7 +51,7 @@ export default function Home() {
     <main className="bg-[#0a0f1e] text-white min-h-screen font-sans">
       <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-[#0a0f1e]/95 backdrop-blur border-b border-white/10' : ''}`}>
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-          <span className="font-bold text-lg tracking-tight">Dr. Vinograd</span>
+          <span className="font-bold text-lg tracking-tight">{t('nav.siteTitle')}</span>
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map(link => (
               <a key={link.key} href={`#${link.key}`} className="text-sm text-white/70 hover:text-white transition-colors">{link.label}</a>
