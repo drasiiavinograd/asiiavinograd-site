@@ -42,8 +42,8 @@ export default function AnkiPage() {
           </h1>
           <p className="text-white/50 text-lg leading-relaxed mb-4">
             {isRu
-              ? 'Одна большая колода охватывает все разделы USMLE Step 1 — внутри уже всё разделено по темам и подтемам, как в Mnemosyne на скриншоте выше.'
-              : 'One complete deck covering all USMLE Step 1 disciplines — organized by topics and subtopics inside.'}
+              ? 'Одна большая колода охватывает все разделы USMLE — внутри уже всё разделено по темам и подтемам.'
+              : 'One complete deck covering all USMLE disciplines — organized by topics and subtopics inside.'}
           </p>
 
           {/* Sections list */}
@@ -88,8 +88,8 @@ export default function AnkiPage() {
 
           <p className="text-white/30 text-sm mt-6">
             {isRu
-              ? 'Доступно по подписке USMLE Club — $30/мес'
-              : 'Available with USMLE Club subscription — $30/month'}
+              ? 'Доступно бесплатно'
+              : 'Available for free'}
           </p>
 
         </div>
