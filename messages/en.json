@@ -132,10 +132,11 @@
       "USMLE question language — Premium",
       "Patient communication scripts — Premium"
     ],
-    "anki_cta": "Learn more",
-    "cases_cta": "Access Clinical Cases — by subscription",
+    "anki_cta": "Go to Anki Decks",
+    "cases_cta": "Go to Clinical Cases",
     "anki_btn_free": "Download All",
-    "anki_btn_sub": ""
+    "anki_btn_sub": "",
+    "english_cta": "Go to Medical English"
   },
   "lectures": {
     "tag": "Lectures",
