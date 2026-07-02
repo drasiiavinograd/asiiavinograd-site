@@ -158,10 +158,9 @@ export default function Home() {
           <div className="mt-20 grid sm:grid-cols-3 gap-6">
 
             {/* Anki */}
-            <a href="/anki" className="group bg-white/5 border border-white/10 hover:border-[#f47c5a]/40 rounded-2xl p-8 transition-all flex flex-col"
-              style={{ borderLeftWidth: '3px', borderLeftColor: '#f47c5a90' }}>
-              <div className="text-[#f47c5a] text-xs font-mono mb-4">01</div>
-              <h2 className="text-2xl font-bold mb-3 group-hover:text-[#f47c5a] transition-colors">{t('curriculum.anki_title')}</h2>
+            <a href="/anki" className="group bg-white/5 border border-white/10 hover:border-white/25 rounded-2xl p-8 transition-all flex flex-col">
+              <div className="text-white/30 text-xs font-mono mb-4">01</div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-3 text-white">{t('curriculum.anki_title')}</h2>
               <p className="text-white/50 text-sm leading-relaxed flex-1 mb-6">{t('curriculum.anki_desc')}</p>
               <span className="inline-flex items-center gap-2 text-sm font-medium text-[#f47c5a]">
                 {t('curriculum.anki_cta')} →
@@ -169,10 +168,9 @@ export default function Home() {
             </a>
 
             {/* Разборы задач */}
-            <a href="/cases" className="group bg-white/5 border border-white/10 hover:border-[#4ecdc4]/40 rounded-2xl p-8 transition-all flex flex-col"
-              style={{ borderLeftWidth: '3px', borderLeftColor: '#4ecdc490' }}>
-              <div className="text-[#4ecdc4] text-xs font-mono mb-4">02</div>
-              <h2 className="text-2xl font-bold mb-3 group-hover:text-[#4ecdc4] transition-colors">{t('curriculum.cases_title')}</h2>
+            <a href="/cases" className="group bg-white/5 border border-white/10 hover:border-white/25 rounded-2xl p-8 transition-all flex flex-col">
+              <div className="text-white/30 text-xs font-mono mb-4">02</div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-3 text-white">{t('curriculum.cases_title')}</h2>
               <p className="text-white/50 text-sm leading-relaxed flex-1 mb-6">{t('curriculum.cases_desc')}</p>
               <span className="inline-flex items-center gap-2 text-sm font-medium text-[#4ecdc4]">
                 {t('curriculum.cases_cta')} →
@@ -180,15 +178,14 @@ export default function Home() {
             </a>
 
             {/* Медицинский английский */}
-            <a href="/medical-english" className="group bg-white/5 border border-white/10 hover:border-[#e879f9]/40 rounded-2xl p-8 transition-all flex flex-col"
-              style={{ borderLeftWidth: '3px', borderLeftColor: '#e879f990' }}>
-              <div className="text-[#e879f9] text-xs font-mono mb-4">03</div>
-              <h2 className="text-2xl font-bold mb-3 group-hover:text-[#e879f9] transition-colors">{t('curriculum.english_title')}</h2>
+            <a href="/medical-english" className="group bg-white/5 border border-white/10 hover:border-white/25 rounded-2xl p-8 transition-all flex flex-col">
+              <div className="text-white/30 text-xs font-mono mb-4">03</div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-3 text-white">{t('curriculum.english_title')}</h2>
               <p className="text-white/50 text-sm leading-relaxed flex-1 mb-6">{t('curriculum.english_desc')}</p>
               <div className="space-y-2 mb-6">
                 {englishFeatures.map((feature, i) => (
                   <div key={i} className="flex items-center gap-2 text-xs">
-                    <div className={`w-1 h-1 rounded-full shrink-0 ${i === 0 ? 'bg-[#e879f9]' : 'bg-white/20'}`} />
+                    <div className="w-1 h-1 rounded-full shrink-0 bg-white/30" />
                     <span className={i === 0 ? 'text-white/70' : 'text-white/30'}>{feature}</span>
                   </div>
                 ))}
