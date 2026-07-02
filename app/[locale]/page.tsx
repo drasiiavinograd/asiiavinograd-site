@@ -155,69 +155,46 @@ export default function Home() {
           </div>
 
           {/* Anki блок */}
-          <div className="mt-16">
-            <div className="mb-6">
-              <h3 className="text-xl font-bold text-white">{t('curriculum.anki_title')}</h3>
-              <p className="text-white/50 text-sm mt-1">{t('curriculum.anki_desc')}</p>
-            </div>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
-              {curriculumItems.map((item) => (
-                <a key={item.slug} href={`/${item.slug}#anki`}
-                  className="bg-white/5 border border-white/10 rounded-xl p-4 hover:bg-[#f47c5a]/5 hover:border-[#f47c5a]/30 transition-all block group">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-sm font-medium text-white/70 group-hover:text-[#f47c5a] transition-colors">{item.title}</span>
-                    {item.free && (
-                      <span className="text-xs px-2 py-0.5 rounded-full font-semibold bg-[#f47c5a]/20 text-[#f47c5a]">{t('curriculum.free_badge')}</span>
-                    )}
-                  </div>
-                  <div className="text-white/30 text-xs">{t('curriculum.anki_title')}</div>
-                </a>
-              ))}
-            </div>
+          <div className="mt-20">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">{t('curriculum.anki_title')}</h2>
+            <p className="text-white/50 text-lg mb-8 max-w-2xl">{t('curriculum.anki_desc')}</p>
+            <a href="/anki" className="inline-flex items-center gap-2 bg-[#f47c5a] hover:bg-[#e06b49] text-white px-8 py-3 rounded-full font-medium transition-colors">
+              {t('curriculum.anki_cta')}
+            </a>
           </div>
 
           {/* Разборы задач блок */}
-          <div className="mt-10">
-            <div className="mb-6">
-              <h3 className="text-xl font-bold text-white">{t('curriculum.cases_title')}</h3>
-              <p className="text-white/50 text-sm mt-1">{t('curriculum.cases_desc')}</p>
-            </div>
+          <div className="mt-20">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">{t('curriculum.cases_title')}</h2>
+            <p className="text-white/50 text-lg mb-8 max-w-2xl">{t('curriculum.cases_desc')}</p>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
               {curriculumItems.map((item) => (
                 <a key={item.slug} href={`/${item.slug}#cases`}
                   className="bg-white/5 border border-white/10 rounded-xl p-4 hover:bg-[#4ecdc4]/5 hover:border-[#4ecdc4]/30 transition-all block group">
-                  <div className="flex items-center justify-between mb-2">
+                  <div className="flex items-center justify-between mb-1">
                     <span className="text-sm font-medium text-white/70 group-hover:text-[#4ecdc4] transition-colors">{item.title}</span>
                     {item.free && (
                       <span className="text-xs px-2 py-0.5 rounded-full font-semibold bg-[#4ecdc4]/20 text-[#4ecdc4]">{t('curriculum.free_badge')}</span>
                     )}
                   </div>
-                  <div className="text-white/30 text-xs">{t('curriculum.cases_title')}</div>
                 </a>
               ))}
             </div>
           </div>
 
           {/* Медицинский английский */}
-          <div className="mt-10 bg-white/5 border border-[#e879f9]/20 rounded-2xl p-8">
-            <div className="flex items-start justify-between flex-wrap gap-4 mb-6">
-              <div>
-                <h3 className="text-xl font-bold text-[#e879f9]">{t('curriculum.english_title')}</h3>
-                <p className="text-white/50 text-sm mt-1">{t('curriculum.english_desc')}</p>
-              </div>
-              <span className="text-xs font-semibold px-3 py-1 rounded-full bg-[#e879f9]/20 text-[#e879f9]">
-                {t('curriculum.english_badge_free')}
-              </span>
-            </div>
-            <div className="grid sm:grid-cols-2 gap-3">
+          <div className="mt-20">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[#e879f9]">{t('curriculum.english_title')}</h2>
+            <p className="text-white/50 text-lg mb-8 max-w-2xl">{t('curriculum.english_desc')}</p>
+            <div className="grid sm:grid-cols-2 gap-3 mb-8 max-w-2xl">
               {englishFeatures.map((feature, i) => (
-                <div key={i} className="flex items-center gap-2 text-sm">
-                  <div className={`w-1 h-1 rounded-full shrink-0 ${i === 0 ? 'bg-[#e879f9]' : 'bg-white/20'}`} />
-                  <span className={i === 0 ? 'text-white/80' : 'text-white/35'}>{feature}</span>
+                <div key={i} className="flex items-center gap-3 text-sm">
+                  <div className="w-1 h-1 rounded-full shrink-0 bg-[#e879f9]" />
+                  <span className={i === 0 ? 'text-white/80' : 'text-white/50'}>{feature}</span>
                 </div>
               ))}
             </div>
-            <a href="/medical-english" className="inline-block mt-6 text-sm font-medium text-[#e879f9] hover:text-white transition-colors">
+            <a href="/medical-english" className="inline-flex items-center gap-2 border border-[#e879f9]/40 hover:border-[#e879f9] text-[#e879f9] px-8 py-3 rounded-full font-medium transition-colors">
               {t('curriculum.english_title')} →
             </a>
           </div>
