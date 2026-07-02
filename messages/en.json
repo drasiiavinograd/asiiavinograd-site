@@ -109,16 +109,23 @@
         "topics": "CNS anatomy, Dementia, Movement disorders, Psychopharmacology",
         "free": false,
         "slug": "neurology-psychiatry"
-      },
-      {
-        "title": "Medical English",
-        "topics": "Terminology, Clinical vocabulary, Patient communication, USMLE language",
-        "free": false,
-        "slug": "medical-english"
       }
     ],
     "free_badge": "Free",
-    "paid_badge": "Premium"
+    "paid_badge": "Premium",
+    "anki_title": "Anki Decks",
+    "anki_desc": "Spaced repetition cards for every discipline — free for Microbiology, premium for the rest",
+    "cases_title": "Clinical Cases",
+    "cases_desc": "USMLE-style clinical vignettes by discipline — free for Microbiology, premium for the rest",
+    "english_title": "Medical English",
+    "english_desc": "Terminology, clinical vocabulary, patient communication and USMLE language",
+    "english_badge_free": "Some free",
+    "english_features": [
+      "Medical terminology basics — Free",
+      "Clinical vocabulary by system — Premium",
+      "USMLE question language — Premium",
+      "Patient communication scripts — Premium"
+    ]
   },
   "lectures": {
     "tag": "Lectures",
