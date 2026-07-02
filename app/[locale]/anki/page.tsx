@@ -100,31 +100,42 @@ export default function AnkiPage() {
         {/* CTA */}
         <div className="bg-white/5 border border-white/10 rounded-2xl p-8 text-center">
           <h2 className="text-2xl font-bold mb-3">
-            {isRu ? 'Все колоды — бесплатно' : 'All decks — free'}
+            {isRu ? 'Скачать все колоды' : 'Download all decks'}
           </h2>
-          <p className="text-white/50 mb-6 max-w-md mx-auto">
+          <p className="text-white/50 mb-8 max-w-md mx-auto">
             {isRu
-              ? 'Подпишитесь на Patreon или Tribute и скачайте все Anki-колоды сразу'
-              : 'Subscribe on Patreon and download all Anki decks at once'}
+              ? 'Все Anki-колоды доступны по подписке. Выберите удобный язык.'
+              : 'All Anki decks are available by subscription.'}
           </p>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+          {isRu ? (
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <a
+                href="https://patreon.com/drasiiavinograd"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#f47c5a] hover:bg-[#e06b49] text-white px-8 py-3 rounded-full font-medium transition-colors"
+              >
+                Скачать все на русском
+              </a>
+              <a
+                href="https://patreon.com/drasiiavinograd"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border border-white/20 hover:border-white/40 text-white px-8 py-3 rounded-full font-medium transition-colors"
+              >
+                Скачать все на английском
+              </a>
+            </div>
+          ) : (
             <a
               href="https://patreon.com/drasiiavinograd"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#f47c5a] hover:bg-[#e06b49] text-white px-8 py-3 rounded-full font-medium transition-colors"
+              className="inline-block bg-[#f47c5a] hover:bg-[#e06b49] text-white px-8 py-3 rounded-full font-medium transition-colors"
             >
-              Patreon — $30/мес
+              Download All
             </a>
-            <a
-              href="https://t.me/usmle_vinograd"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="border border-white/20 hover:border-white/40 text-white px-8 py-3 rounded-full font-medium transition-colors"
-            >
-              {isRu ? 'Telegram-канал' : 'Telegram channel'}
-            </a>
-          </div>
+          )}
         </div>
 
       </div>
